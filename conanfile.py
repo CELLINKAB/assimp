@@ -7,7 +7,7 @@ required_conan_version = ">=1.33.0"
 class Assimp(ConanFile):
     name = "assimp"
     #url = "https://github.com/conan-io/conan-center-index"
-    version = "5.1"
+    version = "5.0.2"
     homepage = "https://github.com/CELLINKAB/assimp-cellink"
     description = "A library to import and export various 3d-model-formats including scene-post-processing to generate missing render data."
     topics = ("conan", "assimp", "3d")
