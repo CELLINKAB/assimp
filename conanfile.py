@@ -6,8 +6,9 @@ required_conan_version = ">=1.33.0"
 
 class Assimp(ConanFile):
     name = "assimp"
-    url = "https://github.com/conan-io/conan-center-index"
-    homepage = "https://github.com/assimp/assimp"
+    #url = "https://github.com/conan-io/conan-center-index"
+    version = "5.1"
+    homepage = "https://github.com/CELLINKAB/assimp-cellink"
     description = "A library to import and export various 3d-model-formats including scene-post-processing to generate missing render data."
     topics = ("conan", "assimp", "3d")
     license = "BSD-3-Clause"
@@ -19,7 +20,7 @@ class Assimp(ConanFile):
         "double_precision": [True, False],
     }
     default_options = {
-        "shared": False,
+        "shared": True,
         "fPIC": True,
         "double_precision": False,
     }
@@ -185,7 +186,7 @@ class Assimp(ConanFile):
         return self._cmake
 
     def build(self):
-        self._patch_sources()
+        #self._patch_sources()
         cmake = self._configure_cmake()
         cmake.build()
 
